@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+  
+  body {
+    font-family: var(--font-sans);
+    color: #1a1816;
+    background-color: #FAF9F5;
+  }
+}
+
+.font-serif-luxury {
+  font-family: var(--font-serif);
+}
+
+.font-display-luxury {
+  font-family: var(--font-display);
+}
+
+.font-sans-modern {
+  font-family: var(--font-sans);
+}
+
+/* Print styles for Admin Billing / Invoice */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+}
+
